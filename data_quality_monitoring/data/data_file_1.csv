@@ -1,0 +1,13 @@
+
+import pandas as pd
+
+data_file_1_path = 'data_quality_monitoring/data/data_file_1.csv'
+
+# Load the data from file into a pandas dataframe
+df = pd.read_csv(data_file_1_path)
+
+# Do some data analysis or manipulation here
+...
+
+# Save the modified data back to the file
+df.to_csv(data_file_1_path, index=False)
