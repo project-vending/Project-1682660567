@@ -1,0 +1,33 @@
+json
+{
+  "$schema": "https://greatexpectations.io/schemas/expectation_suite/v3.json",
+  "expectation_suite_name": "Expectations Suite 1",
+  "meta": {
+    "great_expectations_version": "1.2.0"
+  },
+  "expectations": [
+    {
+      "expectation_type": "expect_column_to_exist",
+      "kwargs": {
+        "column": "<COLUMN_NAME>"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "kwargs": {
+        "column": "<COLUMN_NAME>"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_min_to_be_between",
+      "kwargs": {
+        "column": "<COLUMN_NAME>",
+        "min_value": "<MIN_VALUE>",
+        "max_value": "<MAX_VALUE>"
+      },
+      "meta": {}
+    }
+  ]
+}
