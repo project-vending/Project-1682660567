@@ -1,0 +1,32 @@
+yaml
+# great_expectations.yml
+
+# Configure the data context for Great Expectations
+data_context_id: my_data_context
+config_version: 3
+
+# Configure the stores and expectations for Great Expectations
+stores:
+  # Define the store for the data
+  my_datasource:
+    data_asset_type:
+      # Specify the data asset type for the data
+      class_name: PandasDataset
+      module_name: great_expectations.dataset
+    # Specify the path to the data
+    batch_kwargs:
+      path: data_quality_monitoring/data/*.csv
+
+expectations_store:
+  # Define the store for the expectations
+  expectations_store:
+    class_name: TupleFilesystemStoreBackend
+    # Specify the path to the expectations
+    base_directory: expectations
+
+validations_store:
+  # Define the store for the validations
+  validations_store:
+    class_name: TupleFilesystemStoreBackend
+    # Specify the path to the validations
+    base_directory: validations
