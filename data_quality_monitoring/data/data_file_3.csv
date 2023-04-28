@@ -1,0 +1,11 @@
+python
+import csv
+
+# Set the path to the data file
+data_file = "data_quality_monitoring/data/data_file_3.csv"
+
+# Read the contents of the data file
+with open(data_file, 'r') as f:
+    reader = csv.reader(f)
+    for row in reader:
+        print(row)
